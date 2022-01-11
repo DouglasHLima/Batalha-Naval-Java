@@ -1,5 +1,7 @@
 package board;
 
+import utils.Printer;
+
 import java.util.Objects;
 
 public class Board {
