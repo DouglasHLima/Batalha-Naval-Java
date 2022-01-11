@@ -35,14 +35,16 @@ public class Board {
         }
     }
 
-    public void insertMove (int line,int column ) {
+    public void insertMove (int line,int column, boolean isPlayer ) {
         if(Objects.equals(board[line][column], " ")) {
             board[line][column] = "-";
-            Printer.waterHit();
+            if (isPlayer) {
+                Printer.waterHit()};
         } else if (Objects.equals(board[line][column], "N")) {
             board[line][column] ="*";
             this.hitCount++;
-            Printer.shipHit();
+            if (isPlayer) {
+            Printer.shipHit()};
         }
     }
 
