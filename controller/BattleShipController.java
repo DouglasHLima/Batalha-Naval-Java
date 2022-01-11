@@ -23,7 +23,7 @@ public class BattleShipController {
     private final CoordinateGenerator readCoordinates =
             new CoordinateGenerator(INITIAL_BOARD_LETTER_SIZE,OFFSET_BOARD_POSITION);
 
-    private final Scanner reader = new Scanner(System.in);
+    private Scanner reader = new Scanner(System.in);
 
 
 
@@ -101,6 +101,7 @@ public class BattleShipController {
     public void reset(){
         this.playerOne = null;
         this.playerTwo = null;
+        this.reader = new Scanner(System.in);
         this.status = GameStatus.START;
     }
 
