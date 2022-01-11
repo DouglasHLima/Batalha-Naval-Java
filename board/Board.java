@@ -36,9 +36,11 @@ public class Board {
     public void insertMove (int line,int column ) {
         if(Objects.equals(board[line][column], " ")) {
             board[line][column] = "-";
+            Printer.waterHit();
         } else if (Objects.equals(board[line][column], "N")) {
             board[line][column] ="*";
             this.hitCount++;
+            Printer.shipHit();
         }
     }
 
