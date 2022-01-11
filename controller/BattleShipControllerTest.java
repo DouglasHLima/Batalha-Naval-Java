@@ -7,6 +7,12 @@ public class BattleShipControllerTest {
             control.configPlayers();
             control.insertShips();
             control.play();
+            control.congratulateWinner();
+            control.verifyContinueOption();
+            control.reset();
+            control.configPlayers();
+            control.insertShips();
+            control.play();
         }
 
 }
