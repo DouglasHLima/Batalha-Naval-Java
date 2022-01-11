@@ -42,7 +42,7 @@ public class Player {
 
 
     public void insertMove(Coordinate position, Board boardReference) {
-        boardReference.insertMove(position.getROW(), position.getCOLUMN());
+        boardReference.insertMove(position.getROW(), position.getCOLUMN(),true);
         playedCoordinates.add(position);
         this.hitCount = boardReference.getHitCount();
     }
