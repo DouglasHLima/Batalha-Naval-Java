@@ -47,7 +47,7 @@ public class CPU extends Player {
         (this.playedCoordinates.contains(position));
 
         this.playedCoordinates.add(position);
-        boardReference.insertMove(position.getROW(), position.getCOLUMN());
+        boardReference.insertMove(position.getROW(), position.getCOLUMN(),false);
         this.hitCount = boardReference.getHitCount();
     }
 
