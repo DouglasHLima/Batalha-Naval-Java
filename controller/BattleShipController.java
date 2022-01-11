@@ -1,8 +1,7 @@
 package controller;
 
-
 import board.Board;
-import controller.model.GameStatus;
+import controller.enums.GameStatus;
 import coordinate_generator.CoordinateGenerator;
 import coordinate_generator.model.Coordinate;
 import player.CPU;
@@ -21,7 +20,7 @@ public class BattleShipController {
     private final Character INITIAL_BOARD_LETTER_SIZE = 'A';
     private final Integer OFFSET_BOARD_POSITION = 1;
 
-    private final CoordinateGenerator readCordinates =
+    private final CoordinateGenerator readCoordinates =
             new CoordinateGenerator(INITIAL_BOARD_LETTER_SIZE,OFFSET_BOARD_POSITION);
 
     private final Scanner reader = new Scanner(System.in);
@@ -30,6 +29,7 @@ public class BattleShipController {
 
     private final Verifiyer verifyRange = (row, collumn) ->
             row > 0 && collumn > 0 && row < BOARD_ROW_SIZE && collumn < BOARD_COLLUMN_SIZE;
+
     private final Verifiyer isHigherOrEqualThan = (valueToCompare,limit) ->
             valueToCompare >= limit;
 
@@ -52,10 +52,9 @@ public class BattleShipController {
         this.playerTwo.setBoard(playerTwoBoard);
     }
 
-
     public void insertShips(){
         Printer.GetPlayersShips(this.playerOne.getName());
-        this.playerOne.insertShips(this.setChips(NUMBER_OF_SHIPS));
+        this.playerOne.insertShips(this.setShips(NUMBER_OF_SHIPS));
         this.playerTwo.insertShips();
         Printer.allOk();
         this.status = GameStatus.CONTINUE;
@@ -65,8 +64,6 @@ public class BattleShipController {
         playerOne.printBoard();
         Printer.playerInsertPosition(this.playerOne.getName());
         playerOne.insertMove(insertPosition(),playerTwo.getBoard());
-        playerOne.printBoard();
-        Printer.playerInsertPosition(this.playerTwo.getName());
         playerTwo.insertMove(playerOne.getBoard());
     }
 
@@ -82,7 +79,7 @@ public class BattleShipController {
         playerTwo.printBoard();
     }
 
-    public void  checkWinner(){
+    public void checkEndGame(){
         if(isHigherOrEqualThan.verify(this.playerOne.getHitCount(),NUMBER_OF_SHIPS)) {
             this.status = GameStatus.WON;
         }else if(isHigherOrEqualThan.verify(this.playerTwo.getHitCount(),NUMBER_OF_SHIPS)){
@@ -120,7 +117,7 @@ public class BattleShipController {
         return this.status;
     }
 
-    private List<Coordinate> setChips(Integer listSize) {
+    private List<Coordinate> setShips(Integer listSize) {
         List<Coordinate> coordinates = new ArrayList<>();
         while (coordinates.size() < listSize){
             Printer.insertShipPosition((coordinates.size()+1));
@@ -137,7 +134,7 @@ public class BattleShipController {
     private Coordinate insertPosition(){
         while (true) {
             try {
-                Coordinate position = readCordinates.getCoordinate(this.reader.nextLine());
+                Coordinate position = readCoordinates.getCoordinate(this.reader.nextLine());
                 if (verifyRange.verify(position.getROW(), position.getCOLUMN())) {
                     return position;
                 } else {

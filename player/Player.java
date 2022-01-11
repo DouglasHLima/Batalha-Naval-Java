@@ -12,8 +12,8 @@ public class Player {
 
     private String name;
     protected Integer hitCount = 0 ;
-    protected ArrayList<Coordinate> cordinates = new ArrayList<>();
-    protected ArrayList<Coordinate> playedCordinates = new ArrayList<>();
+
+    protected ArrayList<Coordinate> playedCoordinates = new ArrayList<>();
     protected Board board;
 
     Player(String name, Board board) {
@@ -43,16 +43,16 @@ public class Player {
 
     public void insertMove(Coordinate position, Board boardReference) {
         boardReference.insertMove(position.getROW(), position.getCOLUMN());
-        playedCordinates.add(position);
+        playedCoordinates.add(position);
         this.hitCount = boardReference.getHitCount();
     }
 
     public void printBoard () {
-        board.printBoard();
+        this.board.printBoard();
     }
 
-    public List<Coordinate> getPlayedCordinates() {
-        return playedCordinates;
+    public List<Coordinate> getPlayedCoordinates() {
+        return playedCoordinates;
     }
 
     public Board getBoard(){
@@ -63,7 +63,7 @@ public class Player {
         return this.hitCount >= maxHitValue;
     }
 
-    public Integer getHitCount() {
+    public int getHitCount() {
         return hitCount;
     }
 

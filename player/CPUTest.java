@@ -26,11 +26,11 @@ public class CPUTest {
          player2.insertMove(player.getBoard());
 
          System.out.println("player 1 ");
-         System.out.println(player.getPlayedCordinates());
+         System.out.println(player.getPlayedCoordinates());
          player.printBoard();
 
          System.out.println("player 2");
-         System.out.println(player2.getPlayedCordinates());
+         System.out.println(player2.getPlayedCoordinates());
          player2.printBoard();
      }
 

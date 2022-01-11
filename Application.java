@@ -1,6 +1,6 @@
 import controller.BattleShipController;
 
-import controller.model.GameStatus;
+import controller.enums.GameStatus;
 
 
 
@@ -41,7 +41,7 @@ public class Application {
 
         public static void gameContinue(){
                 controller.play();
-                controller.checkWinner();
+                controller.checkEndGame();
         }
 
         public static void gameWin(){
@@ -50,13 +50,13 @@ public class Application {
         }
 
         public static void gameReset(){
-                System.out.println("resetando");
+                //System.out.println("resetando");
                 controller.reset();
         }
 
         public static void gameEnd(){
 
                 controller.end();
-                System.exit(10);
+                //System.exit(10);
         }
 }

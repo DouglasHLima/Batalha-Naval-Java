@@ -5,13 +5,16 @@ import board.Board;
 import coordinate_generator.model.Coordinate;
 
 import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class CPU extends Player {
 
-    private final Board board = super.board;
+    private final List<Coordinate> coordinates = new ArrayList<>();
 
     SecureRandom sRandom = new SecureRandom();
+
 
     public CPU(String name, Board board){
         super(name, board);
@@ -21,16 +24,16 @@ public class CPU extends Player {
 
 
     public void insertShips() {
-        while(cordinates.size() < 10){
+        while(coordinates.size() < 10){
             Coordinate position = new Coordinate(
                     (sRandom.nextInt(10)+1),
                     (sRandom.nextInt(10)+1)
             );
-            if (!cordinates.contains(position)){
-                cordinates.add(position);
+            if (!this.coordinates.contains(position)){
+                this.coordinates.add(position);
             }
         }
-        super.insertShips(cordinates);
+        super.insertShips(coordinates);
     }
 
     public void insertMove(Board boardReference) {
@@ -41,9 +44,9 @@ public class CPU extends Player {
                     (sRandom.nextInt(10)+1)
             );
         }while
-        (this.playedCordinates.contains(position));
+        (this.playedCoordinates.contains(position));
 
-        this.playedCordinates.add(position);
+        this.playedCoordinates.add(position);
         boardReference.insertMove(position.getROW(), position.getCOLUMN());
         this.hitCount = boardReference.getHitCount();
     }

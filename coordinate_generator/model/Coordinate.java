@@ -1,6 +1,5 @@
 package coordinate_generator.model;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 public class Coordinate {

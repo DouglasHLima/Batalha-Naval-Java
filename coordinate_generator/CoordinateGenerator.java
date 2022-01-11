@@ -5,8 +5,7 @@ import java.util.function.Function;
 
 /**
  * this class provides a simple way to get an array of coordinate integers by
- * string entries, such as: A1, B2, etc. the initial value provided starts at
- * [1,1]
+ * string entries, such as: A1, B2, etc.
  */
 
 public class CoordinateGenerator {

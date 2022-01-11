@@ -1,4 +1,4 @@
-package controller.model;
+package controller.enums;
 
 public enum GameStatus {
     START,WON,CONTINUE,END,RESET
