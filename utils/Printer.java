@@ -38,7 +38,7 @@ public final class Printer {
     }
 
     public static void congrats(String name){
-        System.out.printf("%n%s%s%n",name,CONGRATULATE_PLAYER);
+        System.out.printf("%n%s %s%n",name,CONGRATULATE_PLAYER);
     }
     public static void boardHeader(String name){
         System.out.printf("%n%s%nPlayer Name: %s%n",BOARD_HEADER,name);
