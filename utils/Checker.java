@@ -1,6 +1,6 @@
 package utils;
 
 @FunctionalInterface
-public interface Verifiyer {
+public interface Checker {
     Boolean verify(int a, int b);
 }

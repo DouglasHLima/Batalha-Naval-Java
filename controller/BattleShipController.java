@@ -6,7 +6,7 @@ import coordinate_generator.CoordinateGenerator;
 import coordinate_generator.model.Coordinate;
 import player.CPU;
 import player.Player;
-import utils.Verifiyer;
+import utils.Checker;
 import utils.Printer;
 
 import java.util.ArrayList;
@@ -27,10 +27,10 @@ public class BattleShipController {
 
 
 
-    private final Verifiyer verifyRange = (row, collumn) ->
+    private final Checker verifyRange = (row, collumn) ->
             row > 0 && collumn > 0 && row < BOARD_ROW_SIZE && collumn < BOARD_COLLUMN_SIZE;
 
-    private final Verifiyer isHigherOrEqualThan = (valueToCompare,limit) ->
+    private final Checker isHigherOrEqualThan = (valueToCompare, limit) ->
             valueToCompare >= limit;
 
     private  Player playerOne;

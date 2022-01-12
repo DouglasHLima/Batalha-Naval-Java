@@ -50,13 +50,10 @@ public class Application {
         }
 
         public static void gameReset(){
-                //System.out.println("resetando");
                 controller.reset();
         }
 
         public static void gameEnd(){
-
                 controller.end();
-                //System.exit(10);
         }
 }
