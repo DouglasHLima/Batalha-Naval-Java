@@ -39,12 +39,14 @@ public class Board {
         if(Objects.equals(board[line][column], " ")) {
             board[line][column] = "-";
             if (isPlayer) {
-                Printer.waterHit()};
+                Printer.waterHit();
+            }
         } else if (Objects.equals(board[line][column], "N")) {
             board[line][column] ="*";
             this.hitCount++;
             if (isPlayer) {
-            Printer.shipHit()};
+            Printer.shipHit();
+            }
         }
     }
 
