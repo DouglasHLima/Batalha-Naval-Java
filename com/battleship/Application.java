@@ -1,6 +1,8 @@
-import controller.BattleShipController;
+package com.battleship;
 
-import controller.enums.GameStatus;
+import com.battleship.controller.BattleShipController;
+
+import com.battleship.controller.enums.GameStatus;
 
 
 

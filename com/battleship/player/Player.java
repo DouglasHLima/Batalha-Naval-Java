@@ -1,7 +1,7 @@
-package player;
+package com.battleship.player;
 
-import board.Board;
-import coordinate_generator.model.Coordinate;
+import com.battleship.board.Board;
+import com.battleship.coordinate_generator.model.Coordinate;
 
 
 import java.util.ArrayList;

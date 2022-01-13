@@ -1,4 +1,4 @@
-package coordinate_generator.model;
+package com.battleship.coordinate_generator.model;
 
 import java.util.Objects;
 

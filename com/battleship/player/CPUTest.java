@@ -1,6 +1,6 @@
-package player;
+package com.battleship.player;
 
-import board.Board;
+import com.battleship.board.Board;
 
 public class CPUTest {
     public static void main(String[] args) {
@@ -25,11 +25,11 @@ public class CPUTest {
          player.insertMove(player2.getBoard());
          player2.insertMove(player.getBoard());
 
-         System.out.println("player 1 ");
+         System.out.println("com.battleship.player 1 ");
          System.out.println(player.getPlayedCoordinates());
          player.printBoard();
 
-         System.out.println("player 2");
+         System.out.println("com.battleship.player 2");
          System.out.println(player2.getPlayedCoordinates());
          player2.printBoard();
      }

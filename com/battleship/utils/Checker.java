@@ -1,4 +1,4 @@
-package utils;
+package com.battleship.utils;
 
 @FunctionalInterface
 public interface Checker {

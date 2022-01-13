@@ -1,7 +1,7 @@
-package coordinate_generator;
+package com.battleship.coordinate_generator;
 
 import java.util.Scanner;
-import coordinate_generator.model.Coordinate;
+import com.battleship.coordinate_generator.model.Coordinate;
 
 public class CordinateGeneradorTest {
   public static void main(String[] args) {

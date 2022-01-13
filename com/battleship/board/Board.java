@@ -1,6 +1,6 @@
-package board;
+package com.battleship.board;
 
-import utils.Printer;
+import com.battleship.utils.Printer;
 
 import java.util.Objects;
 

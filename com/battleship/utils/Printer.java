@@ -1,4 +1,4 @@
-package utils;
+package com.battleship.utils;
 
 public final class Printer {
     private Printer(){}

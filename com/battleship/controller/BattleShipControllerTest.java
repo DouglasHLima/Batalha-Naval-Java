@@ -1,4 +1,4 @@
-package controller;
+package com.battleship.controller;
 
 public class BattleShipControllerTest {
 

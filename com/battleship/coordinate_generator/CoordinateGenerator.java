@@ -1,6 +1,6 @@
-package coordinate_generator;
+package com.battleship.coordinate_generator;
 
-import coordinate_generator.model.Coordinate;
+import com.battleship.coordinate_generator.model.Coordinate;
 import java.util.function.Function;
 
 /**

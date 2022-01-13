@@ -1,13 +1,13 @@
-package controller;
+package com.battleship.controller;
 
-import board.Board;
-import controller.enums.GameStatus;
-import coordinate_generator.CoordinateGenerator;
-import coordinate_generator.model.Coordinate;
-import player.CPU;
-import player.Player;
-import utils.Checker;
-import utils.Printer;
+import com.battleship.board.Board;
+import com.battleship.controller.enums.GameStatus;
+import com.battleship.coordinate_generator.CoordinateGenerator;
+import com.battleship.coordinate_generator.model.Coordinate;
+import com.battleship.player.CPU;
+import com.battleship.player.Player;
+import com.battleship.utils.Checker;
+import com.battleship.utils.Printer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +48,7 @@ public class BattleShipController {
         Printer.GetPlayersNames(1);
         this.playerOne.setName(this.reader.nextLine());
         this.playerOne.setBoard(playerOneBoard);
-        this.playerTwo.setName("player.CPU");
+        this.playerTwo.setName("com.battleship.player.CPU");
         this.playerTwo.setBoard(playerTwoBoard);
     }
 
